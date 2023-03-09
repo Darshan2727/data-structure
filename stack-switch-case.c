@@ -38,18 +38,18 @@ int main()
     display();
     printf("1=push:");
     printf("\n2=pop:");
-    scanf("%d",&ch);
-    switch(ch)
+    scanf("%d", &ch);
+    switch (ch)
     {
-        case 1:
+    case 1:
         push(40);
         push(50);
         break;
-        case 2:
+    case 2:
         pop();
         break;
     default:
-        printf("\nWrong Choice");    
+        printf("\nWrong Choice");
     }
-    display(); 
+    display();
 }

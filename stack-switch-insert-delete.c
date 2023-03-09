@@ -2,7 +2,7 @@
 #include <stdio.h>
 #define n 5
 int a[n];
-int top = -1, i,top1=0;
+int top = -1, i, top1 = 0;
 
 int display()
 {
@@ -19,7 +19,7 @@ int push(int val)
     {
         ++top;
         a[top] = val;
-        printf("Enter element is: %d",val);
+        printf("Enter element is: %d", val);
     }
 }
 
@@ -31,7 +31,7 @@ int finsert(int in)
     {
         ++top;
         a[top1] = in;
-        printf("Enter element is: %d",in);
+        printf("Enter element is: %d", in);
     }
 }
 int pop()
@@ -40,29 +40,29 @@ int pop()
         printf("\nArray is Empty..");
     else
     {
-        printf("Enter element is: %d",a[top]);
+        printf("Enter element is: %d", a[top]);
         --top;
     }
 }
 int main()
 {
-    int ch,x;
+    int ch, x;
     printf("1. push:");
     printf("\n2. pop:");
     printf("\n3. first insert:");
     printf("\n9. display:");
     printf("\n0. Exit");
 
-    while(ch!=0)
+    while (ch != 0)
     {
         printf("\nEnter your choice: ");
-        scanf("%d",&ch);
+        scanf("%d", &ch);
 
-    switch(ch)
-    {
+        switch (ch)
+        {
         case 1:
             printf("Enter element: ");
-            scanf("%d",&x);
+            scanf("%d", &x);
             push(x);
             break;
         case 2:
@@ -70,7 +70,7 @@ int main()
             break;
         case 3:
             printf("Enter element: ");
-            scanf("%d",&x);
+            scanf("%d", &x);
             push(x);
             break;
         case 9:
@@ -79,8 +79,7 @@ int main()
         case 0:
             break;
         default:
-            printf("\nWrong Choice");    
+            printf("\nWrong Choice");
+        }
     }
-    }
-    
-}                                                                       
+}
