@@ -21,7 +21,7 @@ int main()
     int a[n];
     printf("Unsorted array:");
     for (int i = 0; i < n; i++)
-        a[i] = rand() % 11;
+        a[i] = rand() % 15;
     for (int i = 0; i < n; i++)
         printf(" %d", a[i]);
 
