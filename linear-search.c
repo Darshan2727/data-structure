@@ -5,11 +5,6 @@ int linearsearch(int a[], int x)
 {
     for (int i = 0; i < n; i++)
     {
-<<<<<<< HEAD
-        
-=======
-
->>>>>>> 70957e6017b6b0ff87e914862619b7522ac4db5a
         if (a[i] == x)
             return i + 1;
     }
