@@ -1,3 +1,4 @@
+// simple
 #include <stdio.h>
 #define n 5
 int a[n];
@@ -5,7 +6,7 @@ int f = -1, r = -1, i;
 int dis()
 {
     if (f < 0)
-        printf("Array is Empty1");
+        printf("Array is Empty.....");
     else
     {
         for (i = f; i <= r; i++)
@@ -29,12 +30,12 @@ int insertlast(int val)
 }
 int delete()
 {
-    if (f >= n - 1)
+    if (f < 0)
     {
-        printf("Array if EMPTY\n");
+        printf("Array is already EMPTY\n");
     }
-    // else if(f<0)
-    //     f=r=-1;
+    else if (f == r)
+        f = r = -1;
     else
     {
         f++;
@@ -47,7 +48,9 @@ int main()
     insertlast(30);
     insertlast(40);
     insertlast(50);
+    dis();
 
+    delete ();
     delete ();
     delete ();
     delete ();
