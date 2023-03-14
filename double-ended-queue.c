@@ -32,14 +32,14 @@ int insertfirst(int aa)
 {
     if (f>=n-1)
         printf("Array is Full\n");
-    else if (f<0)
+    else if (f==r)
     {
-        f=r=0;
-        a[f]=aa;
+        r=f=0;
+         a[f]=aa;
     }    
     else 
     {
-        a[++f]=aa;
+        a[f++]=aa;
        
     }
 }
