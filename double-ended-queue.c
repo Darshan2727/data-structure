@@ -30,21 +30,20 @@ int insertlast(int val)
 }
 int insertfirst(int aa)
 {
-    if (f==0)
+    if (f == 0)
         printf("Not Insert at that time\n");
-    else if (f<0)
-    if (f>=n-1)
-        printf("Array is Full\n");
-    else if (f==r)
-    {
-        r=f=0;
-         a[f]=aa;
-    }    
-    else 
-    {
-        a[--f]=aa;
-       
-    }
+    else if (f < 0)
+        if (f >= n - 1)
+            printf("Array is Full\n");
+        else if (f == r)
+        {
+            r = f = 0;
+            a[f] = aa;
+        }
+        else
+        {
+            a[--f] = aa;
+        }
 }
 int delete()
 {
@@ -61,20 +60,20 @@ int delete()
 }
 int deletelast()
 {
-    if(r < 0)
+    if (r < 0)
     {
         printf("Array is Already Empty\n");
     }
-    else if(r == f)
-        f=r=-1;
-    else 
+    else if (r == f)
+        f = r = -1;
+    else
     {
         r--;
-    }    
+    }
 }
 int main()
 {
-   int ch, x,y;
+    int ch, x, y;
     printf("1. First Insert:");
     printf("\n2. Last Insert:");
     printf("\n3. First delete:");
@@ -100,7 +99,7 @@ int main()
             insertlast(y);
             break;
         case 3:
-            delete();
+            delete ();
             break;
         case 4:
             deletelast();
@@ -114,4 +113,4 @@ int main()
             printf("\nWrong Choice");
         }
     }
-}           
+}
