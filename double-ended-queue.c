@@ -30,8 +30,8 @@ int insertlast(int val)
 }
 int insertfirst(int aa)
 {
-    if (f>=n-1)
-        printf("Array is Full\n");
+    if (f==0)
+        printf("Not Insert at that time\n");
     else if (f<0)
     {
         f=r=0;
@@ -39,7 +39,7 @@ int insertfirst(int aa)
     }    
     else 
     {
-        a[++f]=aa;
+        a[--f]=aa;
        
     }
 }
