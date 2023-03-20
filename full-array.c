@@ -25,14 +25,6 @@ int push(int val)
 
 int fpush(int in)
 {
-    // if (0 >= n - 1)
-    //     printf("Array is full.....\n");
-    // else
-    // {
-
-    //     a[0] = ++in;
-    //     printf("Enter element is: %d",in);
-    // }
     if (top >= n - 1)
         printf("Array is full.....\n");
     else
@@ -43,7 +35,6 @@ int fpush(int in)
         }
         a[0] = in;
         ++top;
-        //   for(i=0;i<n;i++);
         printf("Enter element is: %d", in);
     }
 }
@@ -63,23 +54,12 @@ int fpop()
         printf("\nArray is Empty..");
     else
     {
-        // a[0]=a[i];
-        // printf("Enter element is: %d",a[i]);
-        // --i;
-        // --top;
         printf("Enter element is: %d", a[0]);
         for (i = 0; i < n; i++)
         {
             a[i] = a[i + 1];
         }
-
         --top;
-
-        //   a[0]= ii;
-
-        //   for(i=0;i<n;i++);
-        //   printf("Enter element is: %d",a[top]);
-        //   --top;
     }
 }
 int main()
