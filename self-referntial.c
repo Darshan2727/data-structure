@@ -29,14 +29,14 @@ int main()
     // printf("\nA -> value of n:%d\tch:%c",a.n,a.c);
     // printf("\nB -> value of n:%d\tch:%c",b.n,b.c);
 
-    b.ptr = &a;
-    a.ptr = &b;
-    e.ptr = &d;
-    d.ptr = &e;
+    b.ptr = &d;
+    a.ptr = &e;
+    e.ptr = &a;
+    d.ptr = &b;
 
     printf("\n\nAfter Using pointer");
-    printf("\nA -> value of n:%d\tch:%c", b.ptr->n, b.ptr->c);
-    printf("\nB -> value of n:%d\tch:%c", a.ptr->n, a.ptr->c);
-    printf("\nD -> value of n:%d\tch:%c", e.ptr->n, e.ptr->c);
-    printf("\nE -> value of n:%d\tch:%c", d.ptr->n, d.ptr->c);
+    printf("\nA -> value of n:%d\tch:%c", e.ptr->n, e.ptr->c);
+    printf("\nB -> value of n:%d\tch:%c", d.ptr->n, d.ptr->c);
+    printf("\nD -> value of n:%d\tch:%c", b.ptr->n, b.ptr->c);
+    printf("\nE -> value of n:%d\tch:%c", a.ptr->n, a.ptr->c);
 }
