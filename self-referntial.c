@@ -28,6 +28,8 @@ int main()
     // printf("Before Using pointer");
     // printf("\nA -> value of n:%d\tch:%c",a.n,a.c);
     // printf("\nB -> value of n:%d\tch:%c",b.n,b.c);
+    // printf("\nD -> value of n:%d\tch:%c",d.n,d.c);
+    // printf("\nE -> value of n:%d\tch:%c",e.n,e.c);
 
     b.ptr = &d;
     a.ptr = &e;
