@@ -18,6 +18,19 @@ int display()
     }
     printf("\n");
 }
+void firstinsert(int aa)
+{
+    struct node*ptr =head;
+    struct node *temp = (struct node *)malloc(sizeof(struct node));
+    temp->data = aa;
+
+    if(head!=NULL)
+    {
+        temp->next=head;
+        head=temp;
+        return;
+    }
+}    
 void insertend(int val)
 {
     struct node *ptr = head;
@@ -37,6 +50,56 @@ void insertend(int val)
             ptr = ptr->next;
         ptr->next = temp;
     }
+    return;
+}
+void insertmid(int bb,int pos)
+{
+    struct node *ptr = head;
+    struct node *temp = (struct node *)malloc(sizeof(struct node));
+    temp->data = bb;
+    //  temp->data = pos;
+    struct node *prev;
+        while (ptr->data != pos)
+        {
+            prev=ptr;
+            ptr=ptr->next;
+        }
+        prev->next=temp;
+        temp->next=ptr;
+    return;
+}
+void firstdelete()
+{
+    struct node *ptr = head;
+    // struct node *prev;
+
+    if (head == NULL)
+        printf("\nList is Already Empty....");
+    else if (ptr->next == NULL)
+    {
+        head = NULL;
+        free(ptr);
+    }    
+    else 
+    {
+        head = ptr->next;
+        free(ptr);
+    }
+    return;
+}
+void middelete(int pos)
+{
+    struct node *ptr = head;
+    struct node *prev;
+
+        while (ptr->data != pos)
+        {
+            prev = ptr;
+            ptr = ptr->next;
+        }
+        prev->next = ptr->next;
+        free(ptr);
+    
     return;
 }
 void delete()
@@ -72,8 +135,9 @@ int main()
     insertend(50);
     insertend(60);
     display();
-    delete ();
-    delete ();
-
+    // delete ();
+    // delete ();
+    // insertmid(99,3);
+    middelete(3);
     display();
 }
