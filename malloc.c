@@ -21,8 +21,7 @@ int display()
 void insertend(int val)
 {
     struct node *ptr = head;
-    struct node *temp = (struct node *)
-        malloc(sizeof(struct node));
+    struct node *temp = (struct node *)malloc(sizeof(struct node));
     temp->data = val;
     temp->next = NULL;
 
@@ -54,7 +53,7 @@ void delete()
     }
     else
     {
-        while (ptr->next == NULL)
+        while (ptr->next != NULL)
         {
             prev = ptr;
             ptr = ptr->next;
@@ -73,7 +72,8 @@ int main()
     insertend(50);
     insertend(60);
     display();
-    delete();
-    
-    display();   
+    delete ();
+    delete ();
+
+    display();
 }
