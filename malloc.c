@@ -57,7 +57,6 @@ void insertmid(int bb, int pos)
     struct node *ptr = head;
     struct node *temp = (struct node *)malloc(sizeof(struct node));
     temp->data = bb;
-    //  temp->data = pos;
     struct node *prev;
     while (ptr->data != pos)
     {
@@ -71,8 +70,6 @@ void insertmid(int bb, int pos)
 void firstdelete()
 {
     struct node *ptr = head;
-    // struct node *prev;
-
     if (head == NULL)
         printf("\nList is Already Empty....");
     else if (ptr->next == NULL)
