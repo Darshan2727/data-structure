@@ -137,7 +137,7 @@ int main()
     display();
     // delete ();
     // delete ();
-    // insertmid(99,3);
-    middelete(3);
+    // insertmid(99,30);
+    middelete(30);
     display();
 }
